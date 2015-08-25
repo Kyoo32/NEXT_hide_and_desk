@@ -1,8 +1,13 @@
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 desks = [
-	"static/2.1yesol.jpg",
-	"static/2.2heongjin.jpg",
-	"static/2.3dahye.jpg",
-	"static/2.4yunu.jpg",
-	"static/2.5jungbong.jpg",
-	"static/2.6taeho.jpg",
+	"2.1예슬",
+	"2.2형진",
+	"2.3다혜",
+	"2.4연우",
+	"2.5정봉",
+	"2.6태호",
 ]

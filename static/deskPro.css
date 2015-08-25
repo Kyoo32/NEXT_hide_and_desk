@@ -5,16 +5,21 @@ a{
 body {
 	position: relative;;
 	margin: 0;
-	background-color: E7C6C1;
-	background-size: cover;
+	/*
+	background-image: url("/static/background2.png");
+	background-repeat: repeat;
+	background-size: contain;
+	*/
 }
 
 #header {
 	position: relative;
 	top: 0;
 	left: 0;
+	
+	/*
 	background-color: rgba(255, 255, 255, 0.1);
-
+	*/
 	height: 100px;
 	z-index: 100;
 }
@@ -22,14 +27,14 @@ body {
 #project-name {
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	right: 10vw;
 	width: 100%;
 	height: 75px;
 	line-height: 75px;
 
 	overflow: hidden;
 
-	color: CAC9C5;
+	color: 272822;
 	text-align: right;
 	font-size: 50px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -44,7 +49,7 @@ body {
 	width: 100%;
 	height: 100%;
 
-	background-color: 8FAC97;
+	/*background-color: 8FAC97;*/
 	background-image: url("/static/taeho.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -67,7 +72,7 @@ body {
 	height: 100px;
 	line-height: 100px;
 
-	color: #526C6A;
+	color: #272822;
 	text-align: center;
 	text-decoration: underline;
 
