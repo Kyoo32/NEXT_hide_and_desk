@@ -13,16 +13,13 @@
 	<!--[main]-->
 		<div id="container">
 			<div id="deskImage-container">
-					<img id="deskImage" src = "{{ NextDesks }}" >	
+					<img id="deskImage" src = "{{ NextDesks }}">
 			</div>
-			<div id="icon-sudo-hover">
-				<div id="reload-icon"> </div>
+			<div class="icon-sudo-hover">
+				<div id="person-icon"> </div>
+				<div id="reload-icon" > </div>
 			</div>
-		<script>
-			
-		</script>
 		</div>
-
 	<!--/[main]-->
 {%endblock%}
 {%block footer%}
@@ -37,12 +34,9 @@
 {%endblock%}
 {%block javascript%}
 	<script type="text/javascript">
-	var deskImage = document.getElementById("deskImage")
 	var icon = document.getElementById("reload-icon");
 	icon.addEventListener("click", function(){
-		console.log("why?");
 		location.reload();
-		console.log("doesn't work");
 	});
 	</script>
 {%endblock%}

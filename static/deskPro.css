@@ -5,7 +5,8 @@ a{
 body {
 	position: relative;;
 	margin: 0;
-	/*
+
+	/*   //for design
 	background-image: url("/static/background2.png");
 	background-repeat: repeat;
 	background-size: contain;
@@ -17,7 +18,7 @@ body {
 	top: 0;
 	left: 0;
 	
-	/*
+	/* //for design
 	background-color: rgba(255, 255, 255, 0.1);
 	*/
 	height: 100px;
@@ -44,6 +45,7 @@ body {
 }
 
 #container{
+	/*container for concrete size*/
 	position: relative;
 	margin: 0;
 	width: 100vw;
@@ -51,21 +53,15 @@ body {
 }
 
 #deskImage-container {
+	/*container for ratio size*/
 	position: relative;
 	margin: 0 auto;
 	
 	width: 80%;
 	height: 100%;
-
-	/*
-	//background-color: 8FAC97;
-	background-image: url("/static/taeho.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain; //cover도 있음
-	*/
 }
-#icon-sudo-hover{
+.icon-sudo-hover{
+	/*sudo div having depth for buttons */
 	position: absolute;
 	margin: 0 10%;
 	display: block;
@@ -78,7 +74,7 @@ body {
 
 	transition: opacity linear 0.3s;
 }
-#icon-sudo-hover:hover{
+.icon-sudo-hover:hover{
 	opacity: 1;
 }
 #deskImage {
@@ -86,22 +82,26 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
-#reload-icon {
+.icon-sudo-hover div{
 	position: absolute;
 	margin: 0 auto;
 	width: 100px;
 	height: 100px;
 	z-index: 1000;
-	top: calc(50% - 50px);
-	left: calc(50% - 50px);
 
-	background-image: url("/static/reload.svg");
+	top: calc(50% - 50px);
 	background-size: 100px 100px;
 	border-radius: 80px;
 	border: 5px solid black;
-
 }
+.icon-sudo-hover #person-icon{
+	background-image : url("/static/person.svg");
+	left: calc(38% - 50px);
+} 
+.icon-sudo-hover #reload-icon{
+	background-image : url("/static/spin.svg");
+	left: calc(62% - 50px);
+} 
 
 #footer {
 	position: relative;
