@@ -12,14 +12,15 @@ from flask import (Flask, render_template, redirect, url_for, request, make_resp
 
 
 app = Flask(__name__)
-app.config.from_object(__name__)
+#app.config.from_object(__name__)
 
 
 
 @app.route('/')
 def home():
-	desk = 'static/' + random.choice(desks) + '.jpg'
-	return render_template("home.html", NextDesks = desk)
+	desk = random.choice(desks) + '.jpg'
+	return render_template("home.html", NextDesks = url_for('static', filename = desk) )
+
 
 
 app.run(debug=True, port=3000, host='0.0.0.0')

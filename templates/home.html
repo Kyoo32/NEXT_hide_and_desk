@@ -1,21 +1,29 @@
-<!DOCTYPE <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/static/deskPro.css">
-	<title> ::NEXT::Hide_and_desk::</title>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{%block title%} {{super()}}{%endblock%}
+{%block css%} "/static/deskPro.css" {%endblock%}
+{%block header%}
     <!--[header]-->
 	<header id = "header">
 		<div id = "project-name"> NEXT Hide and Desk </div>
 	</header>
 	<!--/[header]-->
-	
+{%endblock%}
+{%block main%}	
 	<!--[main]-->
-		<div id="container" style="background-image: url({{ NextDesks }})" >
+		<div id="container">
+			<div id="deskImage-container">
+				<img id="deskImage" src = "{{ NextDesks }}" >
+				<div id="reload-icon"> </div>	
+			</div>
+		<script>
+			
+		</script>
 		</div>
+
 	<!--/[main]-->
+{%endblock%}
+{%block footer%}
 	<!--[footer]-->
 	<footer id="footer"> 
 		<div id= "container-cpr">
@@ -24,5 +32,26 @@
 		</div>
 	</footer>
 	<!--/[footer]-->
-</body>
-</html>
+{%endblock%}
+{%block javascript%}
+	<script type="text/javascript">
+	var deskImage = document.getElementById("deskImage")
+	var icon = document.getElementById("reload-icon");
+	deskImage.addEventListener("mouseenter" ,function(){
+		console.log("come");
+		if(icon.style.display !== "block")
+			icon.style.display = "block";
+	});
+	deskImage.addEventListener("mouseout" ,function(){
+		console.log("how");
+		if(icon.style.display !== "none")
+			icon.style.display = "none";
+	});
+	icon.addEventListener("click", function(){
+		console.log("why?");
+		location.reload();
+		console.log("doesn't work");
+	});
+
+	</script>
+{%endblock%}
