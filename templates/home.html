@@ -13,8 +13,10 @@
 	<!--[main]-->
 		<div id="container">
 			<div id="deskImage-container">
-				<img id="deskImage" src = "{{ NextDesks }}" >
-				<div id="reload-icon"> </div>	
+					<img id="deskImage" src = "{{ NextDesks }}" >	
+			</div>
+			<div id="icon-sudo-hover">
+				<div id="reload-icon"> </div>
 			</div>
 		<script>
 			
@@ -37,21 +39,10 @@
 	<script type="text/javascript">
 	var deskImage = document.getElementById("deskImage")
 	var icon = document.getElementById("reload-icon");
-	deskImage.addEventListener("mouseenter" ,function(){
-		console.log("come");
-		if(icon.style.display !== "block")
-			icon.style.display = "block";
-	});
-	deskImage.addEventListener("mouseout" ,function(){
-		console.log("how");
-		if(icon.style.display !== "none")
-			icon.style.display = "none";
-	});
 	icon.addEventListener("click", function(){
 		console.log("why?");
 		location.reload();
 		console.log("doesn't work");
 	});
-
 	</script>
 {%endblock%}

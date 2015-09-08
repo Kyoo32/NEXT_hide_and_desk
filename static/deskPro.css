@@ -65,6 +65,22 @@ body {
 	background-size: contain; //cover도 있음
 	*/
 }
+#icon-sudo-hover{
+	position: absolute;
+	margin: 0 10%;
+	display: block;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	
+	width: 80%;
+	height: 100%;
+
+	transition: opacity linear 0.3s;
+}
+#icon-sudo-hover:hover{
+	opacity: 1;
+}
 #deskImage {
 	position: relative;
 	width: 100%;
@@ -72,8 +88,6 @@ body {
 }
 
 #reload-icon {
-	display: none;
-
 	position: absolute;
 	margin: 0 auto;
 	width: 100px;
