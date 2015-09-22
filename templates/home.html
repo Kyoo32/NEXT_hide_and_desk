@@ -19,6 +19,7 @@
 				<div id="person-icon"> </div>
 				<div id="reload-icon" > </div>
 			</div>
+			<div id="nick-name">{{nickName}}</div>
 		</div>
 	<!--/[main]-->
 {%endblock%}
@@ -34,9 +35,20 @@
 {%endblock%}
 {%block javascript%}
 	<script type="text/javascript">
-	var icon = document.getElementById("reload-icon");
-	icon.addEventListener("click", function(){
+	var iconLoad = document.getElementById("reload-icon");
+	iconLoad.addEventListener("click", function(){
 		location.reload();
+	});
+
+	var iconName = document.getElementById("person-icon");
+	iconName.addEventListener("click", function(){
+		var target = iconName.parentNode.parentNode.querySelector('#nick-name');
+		console.log(target);
+		if(target.style.opacity == "" || target.style.opacity == "0" ){
+			target.style.opacity = "1";
+		}else {
+			target.style.opacity = "0";
+		}
 	});
 	</script>
 {%endblock%}

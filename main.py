@@ -4,7 +4,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 # all  imports
-import sqlite3
+# import sqlite3
 import random
 from deskDB import desks
 
@@ -17,8 +17,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-	desk = random.choice(desks) + '.jpg'
-	return render_template("home.html", NextDesks = url_for('static', filename = desk) )
+	desk = random.choice(desks);
+	return render_template("home.html", NextDesks = url_for('static', filename = desk["imgName"]), nickName = desk["nickName"] )
 
 
-app.run(debug=True, port=3000, host='0.0.0.0')
+app.run(debug=True, port=3000, host='127.0.0.1')
