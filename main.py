@@ -18,7 +18,8 @@ app = Flask(__name__)
 @app.route('/')
 def home():
 	desk = random.choice(desks);
-	return render_template("home.html", NextDesks = url_for('static', filename = desk["imgName"]), nickName = desk["nickName"] )
+	deskImgName = desk["imgName"] + ".jpg";
+	return render_template("home.html", NextDesks = url_for('static', filename = deskImgName), nickName = desk["nickName"] )
 
 
 app.run(debug=True, port=3000, host='127.0.0.1')
